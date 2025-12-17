@@ -1,160 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Student Registration Form</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <h1>Student Registration Form</h1>
+      <div class="header">
+        <h1>Student Registration Form</h1>
+      </div>
+
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" />
+          <div class="error-message" id="nameError">Name cannot be empty</div>
         </div>
-        
-        <form id="registrationForm">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name">
-                <div class="error-message" id="nameError">Name cannot be empty</div>
-            </div>
 
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-                <div class="error-message" id="emailError">Please enter a valid email address</div>
-            </div>
-
-            <div class="form-group">
-                <label>Gender</label>
-                <div class="radio-group">
-                    <div class="radio-option">
-                        <input type="radio" id="male" name="gender" value="Male">
-                        <label for="male">Male</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" id="female" name="gender" value="Female">
-                        <label for="female">Female</label>
-                    </div>
-                    <div class="radio-option">
-                        <input type="radio" id="other" name="gender" value="Other">
-                        <label for="other">Other</label>
-                    </div>
-                </div>
-                <div class="error-message" id="genderError">Please select your gender</div>
-            </div>
-
-            <div class="form-group">
-                <label for="course">Course</label>
-                <select id="course" name="course">
-                    <option value="">Select a course</option>
-                    <option value="HTML & CSS">HTML & CSS</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="React">React</option>
-                    <option value="Node.js">Node.js</option>
-                    <option value="Python">Python</option>
-                    <option value="Java">Java</option>
-                </select>
-                <div class="error-message" id="courseError">Please select a course</div>
-            </div>
-
-            <div class="form-group">
-                <div class="checkbox-group">
-                    <input type="checkbox" id="terms" name="terms">
-                    <label for="terms">I agree to the Terms & Conditions</label>
-                </div>
-                <div class="error-message" id="termsError">You must agree to the Terms & Conditions</div>
-            </div>
-
-            <button type="submit" class="submit-btn">Submit</button>
-        </form>
-
-        <div class="output-container" id="outputContainer">
-            <div class="success-title">Registration Successful!</div>
-            <div class="output-item">
-                <span class="output-label">Name:</span>
-                <span class="output-value" id="outputName"></span>
-            </div>
-            <div class="output-item">
-                <span class="output-label">Email:</span>
-                <span class="output-value" id="outputEmail"></span>
-            </div>
-            <div class="output-item">
-                <span class="output-label">Gender:</span>
-                <span class="output-value" id="outputGender"></span>
-            </div>
-            <div class="output-item">
-                <span class="output-label">Course:</span>
-                <span class="output-value" id="outputCourse"></span>
-            </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+          <div class="error-message" id="emailError">
+            Please enter a valid email address
+          </div>
         </div>
+
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="male" name="gender" value="Male" />
+              <label for="male">Male</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="female" name="gender" value="Female" />
+              <label for="female">Female</label>
+            </div>
+            <div class="radio-option">
+              <input type="radio" id="other" name="gender" value="Other" />
+              <label for="other">Other</label>
+            </div>
+          </div>
+          <div class="error-message" id="genderError">
+            Please select your gender
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="course">Course</label>
+          <select id="course" name="course">
+            <option value="">Select a course</option>
+            <option value="HTML & CSS">HTML & CSS</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="React">React</option>
+            <option value="Node.js">Node.js</option>
+            <option value="Python">Python</option>
+            <option value="Java">Java</option>
+          </select>
+          <div class="error-message" id="courseError">
+            Please select a course
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" name="terms" />
+            <label for="terms">I agree to the Terms & Conditions</label>
+          </div>
+          <div class="error-message" id="termsError">
+            You must agree to the Terms & Conditions
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+
+      <div class="output-container" id="outputContainer">
+        <div class="success-title">Registration Successful!</div>
+        <div class="output-item">
+          <span class="output-label">Name:</span>
+          <span class="output-value" id="outputName"></span>
+        </div>
+        <div class="output-item">
+          <span class="output-label">Email:</span>
+          <span class="output-value" id="outputEmail"></span>
+        </div>
+        <div class="output-item">
+          <span class="output-label">Gender:</span>
+          <span class="output-value" id="outputGender"></span>
+        </div>
+        <div class="output-item">
+          <span class="output-label">Course:</span>
+          <span class="output-value" id="outputCourse"></span>
+        </div>
+      </div>
     </div>
 
     <script>
-        const form = document.getElementById('registrationForm');
-        const nameInput = document.getElementById('name');
-        const emailInput = document.getElementById('email');
-        const courseSelect = document.getElementById('course');
-        const termsCheckbox = document.getElementById('terms');
-        const outputContainer = document.getElementById('outputContainer');
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            document.querySelectorAll('.error-message').forEach(function(error) {
-                error.classList.remove('show');
-            });
-            document.querySelectorAll('.input-error').forEach(function(input) {
-                input.classList.remove('input-error');
-            });
-
-            let isValid = true;
-            if (nameInput.value.trim() === '') {
-                document.getElementById('nameError').classList.add('show');
-                nameInput.classList.add('input-error');
-                isValid = false;
-            }
-            const emailValue = emailInput.value.trim();
-            if (emailValue === '' || !emailValue.includes('@') || !emailValue.includes('.')) {
-                document.getElementById('emailError').classList.add('show');
-                emailInput.classList.add('input-error');
-                isValid = false;
-            }
-            const genderInputs = document.getElementsByName('gender');
-            let genderSelected = false;
-            for (let i = 0; i < genderInputs.length; i++) {
-                if (genderInputs[i].checked) {
-                    genderSelected = true;
-                    break;
-                }
-            }
-            if (!genderSelected) {
-                document.getElementById('genderError').classList.add('show');
-                isValid = false;
-            }
-            if (courseSelect.value === '') {
-                document.getElementById('courseError').classList.add('show');
-                courseSelect.classList.add('input-error');
-                isValid = false;
-            }
-            if (!termsCheckbox.checked) {
-                document.getElementById('termsError').classList.add('show');
-                isValid = false;
-            }
-            if (isValid) {
-                let selectedGender = '';
-                for (let i = 0; i < genderInputs.length; i++) {
-                    if (genderInputs[i].checked) {
-                        selectedGender = genderInputs[i].value;
-                        break;
-                    }
-                }
-                document.getElementById('outputName').textContent = nameInput.value.trim();
-                document.getElementById('outputEmail').textContent = emailInput.value.trim();
-                document.getElementById('outputGender').textContent = selectedGender;
-                document.getElementById('outputCourse').textContent = courseSelect.value;
-
-                outputContainer.classList.add('show');
-            }
+      const form = document.getElementById("registrationForm");
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const courseSelect = document.getElementById("course");
+      const termsCheckbox = document.getElementById("terms");
+      const outputContainer = document.getElementById("outputContainer");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        document.querySelectorAll(".error-message").forEach(function (error) {
+          error.classList.remove("show");
         });
+        document.querySelectorAll(".input-error").forEach(function (input) {
+          input.classList.remove("input-error");
+        });
+
+        let isValid = true;
+        if (nameInput.value.trim() === "") {
+          document.getElementById("nameError").classList.add("show");
+          nameInput.classList.add("input-error");
+          isValid = false;
+        }
+        const emailValue = emailInput.value.trim();
+        if (
+          emailValue === "" ||
+          !emailValue.includes("@") ||
+          !emailValue.includes(".")
+        ) {
+          document.getElementById("emailError").classList.add("show");
+          emailInput.classList.add("input-error");
+          isValid = false;
+        }
+        const genderInputs = document.getElementsByName("gender");
+        let genderSelected = false;
+        for (let i = 0; i < genderInputs.length; i++) {
+          if (genderInputs[i].checked) {
+            genderSelected = true;
+            break;
+          }
+        }
+        if (!genderSelected) {
+          document.getElementById("genderError").classList.add("show");
+          isValid = false;
+        }
+        if (courseSelect.value === "") {
+          document.getElementById("courseError").classList.add("show");
+          courseSelect.classList.add("input-error");
+          isValid = false;
+        }
+        if (!termsCheckbox.checked) {
+          document.getElementById("termsError").classList.add("show");
+          isValid = false;
+        }
+        if (isValid) {
+          let selectedGender = "";
+          for (let i = 0; i < genderInputs.length; i++) {
+            if (genderInputs[i].checked) {
+              selectedGender = genderInputs[i].value;
+              break;
+            }
+          }
+          document.getElementById("outputName").textContent =
+            nameInput.value.trim();
+          document.getElementById("outputEmail").textContent =
+            emailInput.value.trim();
+          document.getElementById("outputGender").textContent = selectedGender;
+          document.getElementById("outputCourse").textContent =
+            courseSelect.value;
+
+          outputContainer.classList.add("show");
+
+          obj = {
+            name: nameInput.value.trim(),
+            email: emailInput.value.trim(),
+            gender: selectedGender,
+            course: courseSelect.value,
+          };
+          console.log(obj);
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
